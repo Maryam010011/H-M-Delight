@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location - H&M's Delight</title>
+    <style>
+        body {
+            margin-top: -20px;
+            margin-bottom: -10px;
+            margin-left: 0px;
+            margin-right: 0px;
+            font-family: 'Minerva Modern', sans-serif;
+        }
+
+        #addressBar {
+            width: 100%;
+            height: 30px;
+            background-color: #c0a159;
+            text-align: center;
+        }
+
+        #address {
+            font-size: 18px;
+            padding: 5px;
+        }
+
+        #topBar {
+            width: 100%;
+            height: 80px;
+            background-color: #004332;
+            margin-top: -40px;
+            position: sticky;
+            top: 0px;
+            z-index: 1;
+        }
+
+        #resName {
+            font-size: 40px;
+            padding: 15px;
+            color: #c0a159;
+        }
+
+        #navBar {
+            width: 70%;
+            height: 40px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            margin-top: -95px;
+        }
+
+        #navBar a {
+            text-decoration: none;
+            color: #c0a159;
+            font-size: 22px;
+            padding: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        #navBar a:hover {
+            border-top: 1px solid;
+            border-bottom: 1px solid;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        #reservation {
+            position: absolute;
+            margin-left: 85%;
+            margin-top: -40px;
+            font-size: 30px;
+            padding: 3px;
+            text-decoration: none;
+            color: #c0a159;
+            border-top: 2px solid;
+            border-bottom: 2px solid;
+        }
+
+        #reservation:hover {
+            background-color: #c0a159;
+            color: #004332;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .location-section {
+            background-color: #004332;
+            padding: 30px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #c0a159;
+        }
+
+        .location {
+            font-size: 18px;
+            color: #c0a159;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .map-container {
+            text-align: center;
+        }
+
+        iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+            border-radius: 8px;
+        }
+
+        #bottomBar {
+            width: 100%;
+            height: 60px;
+            background-color: #004332;
+            margin-bottom: -17px;
+        }
+
+        #navBar_bottom {
+            width: 70%;
+            height: 60px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        #navBar_bottom a {
+            text-decoration: none;
+            color: #c0a159;
+            font-size: 22px;
+            padding: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        #navBar_bottom a:hover {
+            border-top: 1px solid;
+            border-bottom: 1px solid;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        #copyrights {
+            width: 100%;
+            height: 30px;
+            background-color: #c0a159;
+            text-align: center;
+        }
+
+        #copyrights p {
+            padding: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Address Bar -->
+    <div id="addressBar">
+        <p id="address">Inside Centaurus Mall, Sector F-8/4 F-8, Islamabad</p>
+    </div>
+    <!-- Top Bar -->
+    <div id="topBar">
+        <p id="resName">H&M's Delight</p>
+        <nav id="navBar">
+            <a href="home.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="dining.html">Private Dining</a>
+            <a href="About.html">About</a>
+            <a href="contact.html">Contact us</a>
+        </nav>
+        <a href="reservation.html" id="reservation">Reservations</a>
+    </div>
+    <!---Header--->
+    <header>
+        <h1>H&M's Delight - Location</h1>
+    </header>
+
+    <main>
+        <section class="location-section">
+            <h1>Our Location</h1>
+            <p class="location">
+                H&M's Delight is located on the 5th Floor, inside Centaurus Mall, F-8, Islamabad.
+                We offer a delightful dining experience in the heart of the city. Visit us for an unforgettable taste!
+            </p>
+            <div class="map-container">
+                <!-- Google Map Embed Code (Replace the src with your generated Google Map iframe code) -->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3319.047007102621!2d73.04721697434437!3d33.7077325358453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfbfb0f4f77379%3A0xf8c50b8651f56d02!2sCentaurus%20Mall!5e0!3m2!1sen!2s!4v1735928358091!5m2!1sen!2s"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>"
+
+            </div>
+        </section>
+    </main>
+    <div id="footer">
+        <div id="bottomBar">
+            <nav id="navBar_bottom">
+                <a href="https://www.thefairmontroyalyork.com/privacy-policy/" target="_blank">Privacy Policy</a>
+                <a href="https://www.thefairmontroyalyork.com/cookie-policy/" target="_blank">Cookie Policy</a>
+                <a href="https://www.thefairmontroyalyork.com/consumer-request-form/" target="_blank">Consumer Request
+                    Form</a>
+                <a href="press.html">Press</a>
+            </nav>
+        </div>
+        <div id="copyrights">
+            <p>&copy; 2024 H&M’s Delight. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+
+</html>

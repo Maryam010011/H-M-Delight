@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resevation</title>
+    <link rel="stylesheet" href="reservation.css">
+</head>
+
+<body>
+    <div id="addressBar">
+        <p id="address">Inside Centaurus Mall, Sector F-8/4 F-8, Islamabad</p>
+    </div>
+    <div id="topBar">
+        <p id="resName">H&M's Delight</p>
+        <nav id="navBar">
+            <a href="home.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="dining.html">Private Dining</a>
+            <a href="About.html">About</a>
+            <a href="contact.html">Contact us</a>
+
+        </nav>
+        <a href="reservation.html" id="reservation">Reservations</a>
+    </div>
+    <div id="formBody">
+        <div id="h01">
+            <p>Register your Reservation</p>
+        </div>
+        <div id="_form">
+            <form action="">
+                <div class="flexProperty">
+
+                    <div class="longBox"><label for="form_email">Email</label><input type="email" name=""
+                            id="form_email"> <br><span id="email_error"></span></div>
+                </div>
+                <br>
+                <div class="flexProperty">
+                    <div class="smallBox"><label for="first_name">First Name</label><input type="text"
+                            id="first_name"><br><span id="fname_error"></span></div>
+                    <div class="smallBox"><label for="last_name">Last Name</label><input type="text"
+                            id="last_name"><br><span id="lname_error"></span></div>
+                </div>
+                <div class="flexProperty">
+                    <div class="smallBox"><label for="ph_no">Phone Number</label><input type="text" id="ph_no"><br><span
+                            id="ph_error"></span></div>
+                    <div class="smallBox"><label for="no_people">Number of People</label><input type="text"
+                            id="no_people"><br><span id="no_ppl_error"></span></div>
+                </div>
+                <div class="flexProperty">
+                    <div class="longBox"><label for="form_eventDate">Event Date </label><input type="date" name=""
+                            id="form_eventDate"><br><span id="date_error"></span></div>
+                </div><br>
+                <div class="flexProperty">
+                    <div class="longBox"><label for="form_alternateDate">Alternate Date </label><input type="date"
+                            name="" id="form_alternateDate"><br><span id="alt_date_error"></span></div>
+                </div><br>
+                <div class="flexProperty">
+                    <div class="longBox"><label for="form_eventTime">Event Time</label><input type="time" name=""
+                            id="form_eventTime"><br><span id="time_error"></span></div>
+                </div><br>
+                <div class="flexProperty">
+                    <div class="largeBox"><label for="add_info">Aditional Information</label><textarea name=""
+                            id="add_info"
+                            placeholder="Please enter any additional information that we should know"></textarea></div>
+                </div><br>
+                <div id="sbt_container">
+                    <input type="submit" value="Submit" id="sbt_btn">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="footer">
+        <div id="bottomBar">
+            <nav id="navBar_bottom">
+                <a href="https://www.thefairmontroyalyork.com/privacy-policy/" target="_blank">Privacy Policy</a>
+                <a href="https://www.thefairmontroyalyork.com/cookie-policy/" target="_blank">Cookie Policy</a>
+                <a href="https://www.thefairmontroyalyork.com/consumer-request-form/" target="_blank">Consumer Request
+                    Form</a>
+                <a href="press.html">Press</a>
+            </nav>
+        </div>
+        <div id="copyrights">
+            <p>&copy; 2024 H&M’s Delight. All rights reserved.</p>
+        </div>
+    </div>
+    <script src="react.js"></script>
+</body>
+
+</html>

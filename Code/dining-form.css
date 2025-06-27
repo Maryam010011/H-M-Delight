@@ -1,0 +1,194 @@
+@font-face {
+    font-family: 'Minerva Modern';
+    src: url('Fonts/T-26\ -\ Minerva\ Modern\ Regular.otf') format('truetype');
+}
+body{
+    margin-top: -20px;
+    margin-bottom: -10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    font-family: 'Minerva Modern', sans-serif;
+}
+#addressBar{
+    width: 100%;
+    height: 30px;
+    background-color: #c0a159;
+    text-align: center;
+}
+#address{
+    font-size: 18px;
+    padding: 5px;
+}
+#topBar{
+    width: 100%;
+    height: 80px;
+    background-color: #004332;
+    margin-top: -40px;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+#resName{
+    font-size: 40px;
+    padding: 15px;
+    color: #c0a159;
+}
+#navBar{
+    width: 700px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: -95px;
+}
+#navBar a{
+    text-decoration: none;
+    color: #c0a159;
+    font-size: 22px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#navBar a:hover{
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#reservation{
+    position: absolute;
+    margin-left: 85%;
+    margin-top: -40px;
+    font-size: 30px;
+    padding: 3px;
+    text-decoration: none;
+    color: #c0a159;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+}
+#reservation:hover{
+    background-color: #c0a159;
+    color: #004332;
+}
+#formBody{
+    width: 700px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    padding-bottom: 50px;
+}
+#h01{
+    width: 700px;
+    height: 100px;
+    text-align: center;
+}
+#h01 p{
+    font-size: 50px;
+    padding: 30px;
+    
+}
+#_form{
+    width: 700px;
+    height: auto;
+    margin-top: 70px;
+    font-size: 18px;
+}
+#_form span{
+    color: red;
+    font-size: 16px;
+}
+.longBox{
+    width: 600px;
+    height: 60px;
+}
+.smallBox{
+    width: 300px;
+    height: 80px;
+}
+.largeBox{
+    width: 600px;
+    height: 150px;
+}
+.flexProperty{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.longBox input{
+    width: 580px;
+    height: 30px;
+}
+.smallBox input{
+    width: 280px;
+    height: 30px;
+}
+.largeBox textarea{
+    width: 580px;
+    height: 150px;
+}
+#sbt_container{
+    width: 600px;
+    height: 80px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#sbt_btn{
+    width: 100px;
+    height: 33px;
+    font-size: 23px;
+    color: #004332;
+    background-color: white;
+    border-top: 1px solid #004332;
+    border-bottom: 1px solid #004332;
+    border-left: 0px;
+    border-right: 0px;
+}
+#sbt_btn:hover{
+    background-color: #004332;
+    color: #c0a159;
+}
+#bottomBar{
+    width: 100%;
+    height: 60px;
+    background-color: #004332;
+    margin-bottom: -17px;
+}
+#navBar_bottom{
+    width: 700px;
+    height: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+#navBar_bottom a{
+    text-decoration: none;
+    color: #c0a159;
+    font-size: 20px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#navBar_bottom a:hover{
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#copyrights{
+    width: 100%;
+    height: 30px;
+    background-color: #c0a159;
+    text-align: center;
+}
+#copyrights p{
+    padding: 3px;
+}

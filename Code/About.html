@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        /* General Styles */
+        @font-face {
+            font-family: 'Minerva Modern';
+            src: url('Fonts/T-26\ -\ Minerva\ Modern\ Regular.otf') format('truetype');
+        }
+
+        body {
+            margin-top: -20px;
+            margin-bottom: -10px;
+            margin-left: 0px;
+            margin-right: 0px;
+            font-family: 'Minerva Modern', sans-serif;
+        }
+
+        #addressBar {
+            width: 100%;
+            height: 30px;
+            background-color: #c0a159;
+            text-align: center;
+        }
+
+        #address {
+            color: #004332;
+            font-size: 18px;
+            padding: 5px;
+        }
+
+        #topBar {
+            width: 100%;
+            height: 80px;
+            background-color: #004332;
+            margin-top: -40px;
+            position: sticky;
+            top: 0px;
+            z-index: 1;
+        }
+
+        #resName {
+            font-size: 40px;
+            padding: 15px;
+            color: #c0a159;
+        }
+
+        #navBar {
+            width: 70%;
+            height: 40px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            margin-top: -95px;
+        }
+
+        #navBar a {
+            text-decoration: none;
+            color: #c0a159;
+            font-size: 22px;
+            padding: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        #navBar a:hover {
+            border-top: 1px solid;
+            border-bottom: 1px solid;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        #reservation {
+            position: absolute;
+            margin-left: 85%;
+            margin-top: -40px;
+            font-size: 30px;
+            padding: 3px;
+            text-decoration: none;
+            color: #c0a159;
+            border-top: 2px solid;
+            border-bottom: 2px solid;
+        }
+
+        #reservation:hover {
+            background-color: #c0a159;
+            color: #004332;
+        }
+
+
+        .about {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #004332;
+        }
+
+        .about-paragraph {
+            font-size: 1em;
+            color: #004332;
+            /* Green color for this specific paragraph */
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1em;
+            color: #c0a159;
+        }
+
+        /* Slideshow */
+        .slideshow-container {
+            width: 100%;
+            /* Ensure it spans the full width of the container */
+            height: 700px;
+            /* Define a fixed height */
+            overflow: hidden;
+            /* Hide overflowed parts of images */
+            position: relative;
+        }
+
+        .slides {
+            width: 100%;
+            /* Ensure the image takes the full width */
+            height: 100%;
+            /* Match the container's height */
+            object-fit: cover;
+            /* Crop and fill the container without distortion */
+            object-position: center;
+            /* Center the image */
+            display: none;
+            /* Initially hide all images */
+        }
+
+        .active {
+            display: block;
+        }
+
+        /* Team Section */
+        .team-container {
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+
+        }
+        .img_ctr{
+            width: 250px;
+            height: 300px;
+            border-radius: 10%;
+            overflow: hidden;
+        }
+
+        .team-container-heading {
+            width: 100%;
+            /* Span full width */
+            text-align: center;
+            /* Center align the text */
+            margin-bottom: 20px;
+            /* Add spacing below the heading */
+            font-size: 2.5em;
+            /* Adjust font size as needed */
+            color: #004332;
+            /* Match your theme color */
+            font-weight: bold;
+        }
+
+        .team-member {
+            text-align: center;
+
+        }
+
+        .team-member img {
+            width: 100%;
+            height: 100%;
+
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .team-member img:hover {
+            transform: scale(1.1);
+        }
+
+        .team-member-name {
+            margin-top: 10px;
+            font-weight: lighter;
+            font-style: normal;
+            color: #004332;
+            font-size: larger;
+        }
+
+        .team-info {
+            margin-top: 10px;
+            font-weight: lighter;
+            font-style: normal;
+            color: #c0a159;
+            /* Specific color for team member info */
+            font-size: larger;
+        }
+
+        /* Modal for Team Info */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #004332;
+            opacity: 0.95;
+            color: #c0a159;
+            font-size: medium;
+            text-align: center;
+            overflow: auto;
+            z-index: 1000;
+            padding: 50px 20px;
+        }
+
+        .modal-content {
+            margin: 0 auto;
+
+            padding: 30px;
+            border-radius: 8px;
+            width: 80%;
+            height: 60%;
+            color: #c0a159;
+        }
+
+        .close-btn {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+            font-weight: bold;
+            z-index: 1;
+        }
+
+        #bottomBar {
+            width: 100%;
+            height: 60px;
+            background-color: #004332;
+            margin-bottom: -17px;
+        }
+
+        #navBar_bottom {
+            width: 70%;
+            height: 60px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        #navBar_bottom a {
+            text-decoration: none;
+            color: #c0a159;
+            font-size: 22px;
+            padding: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        #navBar_bottom a:hover {
+            border-top: 1px solid;
+            border-bottom: 1px solid;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        #copyrights {
+            width: 100%;
+            height: 30px;
+            background-color: #c0a159;
+            text-align: center;
+        }
+
+        #copyrights p {
+            color: #004332;
+            padding: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="addressBar">
+        <p id="address">Inside Centaurus Mall, Sector F-8/4 F-8, Islamabad</p>
+    </div>
+    <div id="topBar">
+        <p id="resName">H&M's Delight</p>
+        <nav id="navBar">
+            <a href="home.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="dining.html">Private Dining</a>
+            <a href="About.html">About</a>
+            <a href="contact.html">Contact us</a>
+        </nav>
+        <a href="reservation.html" id="reservation">Reservations</a>
+    </div>
+
+    <section class="about">
+
+
+        <!-- Slideshow -->
+        <div class="slideshow-container">
+            <img src="Images/lifestyle.jpg" class="slides active">
+            <img src="Images/lifestyle 2.avif" class="slides">
+            <img src="Images/lifestyle 3.avif" class="slides">
+        </div>
+
+        <div class="Info about Restaurant">
+            <h1>WHERE TASTE REIGNS</h1>
+            <p class="about-paragraph">Evoking the legacy of our hotel's storied past and vibrant new era, H&M's DELIGHT
+                is our distinguished dining room in the heart of this noble manor house. Plating the rich harvest of
+                Pakistan's bountiful produce, our culinary team crafts seasonal menus through local partners and
+                sustainable farmers.</p>
+        </div>
+
+        <!-- Team Section -->
+
+        <div class="team-container">
+            <div class="team-container-heading">OUR TEAM</div>
+
+            <div class="team-member"
+                onclick="showTeamInfo('HAADI BALOUCH','Head Chef with 15 years of experience.Haadi is an experienced chef with years of expertise in creating exceptional dishes. He is one of the co-founders of H&Ms Delight  where he ensures each dish is prepared with the utmost care and passion.')">
+                <div class="img_ctr"><img src="Images/hadi.jpg"></div>
+                <div class="team-member-name">HAADI BALOUCH</div>
+                <div class="team-member-name">General Manager</div>
+            </div>
+
+            <div class="team-member"
+                onclick="showTeamInfo('MARYAM YAQOOB', 'Sous Chef specializing in French cuisine.Maryam is a seasoned chef specializing in gourmet cuisine. As a co-founder of H&Ms Delight, she plays a pivotal role in crafting the restaurants diverse and innovative menu.')">
+                <div class="img_ctr"><img src="Images/maryam_yaqoob.jpg"></div>
+                <div class="team-member-name">MARYAM YAQOOB</div>
+                <div class="team-member-name">Sous Chef</div>
+            </div>
+
+            <div class="team-member"
+                onclick="showTeamInfo('ABDUL HANNAN', 'Pastry Chef creating delightful desserts.Hannan is a culinary master who has been part of the industry for over a decade. His leadership and dedication to perfecting the dining experience are central to H&Ms Delights success.')">
+                <div class="img_ctr"><img src="Images/hannan.jpg"></div>
+                <div class="team-member-name">ABDUL HANNAN</div>
+                <div class="team-member-name">Executive Restaurant Chef</div>
+            </div>
+
+            <div class="team-member"
+                onclick="showTeamInfo('MARYAM JAHANGIR', 'Restaurant Director ensuring a top-notch experience. With a deep understanding of flavors and techniques, they help shape the menu at H&Ms Delight.')">
+                <div class="img_ctr"><img src="Images/maryam_jahngir.JPG"></div>
+                <div class="team-member-name">MARYAM JAHANGIR</div>
+                <div class="team-member-name">Director</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Team Info -->
+    <div class="modal" id="teamModal">
+        <div class="close-btn" onclick="closeModal()">x</div>
+        <div class="modal-content" id="modalContent"></div>
+    </div><br><br><br>
+    <div id="footer">
+        <div id="bottomBar">
+            <nav id="navBar_bottom">
+                <a href="https://www.thefairmontroyalyork.com/privacy-policy/" target="_blank">Privacy Policy</a>
+                <a href="https://www.thefairmontroyalyork.com/cookie-policy/" target="_blank">Cookie Policy</a>
+                <a href="https://www.thefairmontroyalyork.com/consumer-request-form/" target="_blank">Consumer Request
+                    Form</a>
+                <a href="press.html">Press</a>
+            </nav>
+        </div>
+        <div id="copyrights">
+            <p>&copy; 2024 H&M’s Delight. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        // Slideshow Functionality
+        let slideIndex = 0;
+        const slides = document.querySelectorAll(".slides");
+
+        function showSlides() {
+            slides.forEach(slide => slide.classList.remove("active"));
+            slideIndex = (slideIndex + 1) % slides.length;
+            slides[slideIndex].classList.add("active");
+        }
+        setInterval(showSlides, 3000); // Change image every 3 seconds
+
+        // Modal for Team Info
+        function showTeamInfo(name, info) {
+            const modal = document.getElementById("teamModal");
+            const modalContent = document.getElementById("modalContent");
+            modalContent.innerHTML = `<h2>${name}</h2><p>${info}</p>`;
+            modal.style.display = "block";
+        }
+
+        function closeModal() {
+            const modal = document.getElementById("teamModal");
+            modal.style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>

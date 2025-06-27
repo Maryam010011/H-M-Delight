@@ -1,0 +1,182 @@
+@font-face {
+    font-family: 'Minerva Modern';
+    src: url('Fonts/T-26\ -\ Minerva\ Modern\ Regular.otf') format('truetype');
+}
+body{
+    margin-top: -20px;
+    margin-bottom: -10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    font-family: 'Minerva Modern', sans-serif;
+}
+/* CSS navigation bar*/
+#addressBar{                          
+    width: 100%;
+    height: 30px;
+    background-color: #c0a159;
+    text-align: center;
+    color: #004332;
+}
+#address{
+    font-size: 18px;
+    padding: 5px;
+}
+#topBar{
+    width: 100%;
+    height: 80px;
+    background-color: #004332;
+    margin-top: -40px;
+    position: sticky;
+    top: 0px;
+}
+#resName{
+    font-size: 40px;
+    padding: 15px;
+    color: #c0a159;
+}
+#navBar{
+    width: 100%;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: -95px;
+}
+#navBar a{
+    text-decoration: none;
+    color: #c0a159;
+    font-size: 22px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#navBar a:hover{
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#reservation{
+    position: absolute;
+    margin-left: 85%;
+    margin-top: -40px;
+    font-size: 30px;
+    padding: 3px;
+    text-decoration: none;
+    color: #c0a159;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+}
+#reservation:hover{
+    background-color: #c0a159;
+    color: #004332;
+}
+h2{
+text-decoration: none;
+text-align: center;
+ color:  #004332;
+ padding: 10px 20px;
+ margin: 5px;
+ border-bottom: 2px solid transparent;
+}
+/* CSS for fields of cantact form */
+
+.container {
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px#004332;
+    width: 45%;
+    max-width: 600%;
+}
+.form-group {
+    margin-bottom: 15px;
+
+}
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color:#004332 ;
+}
+.form-group label span {
+    font-weight: normal;
+    color: #999;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+.form-group select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-size: 16px 16px;
+}
+.form-group textarea {
+
+    height: 100px;
+    resize: vertical;
+}
+.form-group button {
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
+    color: #004332; 
+    padding: 10px 20px; 
+    margin: 5px;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+}
+.form-group button:hover {
+    color: #c0a159;
+    background-color: #004332;
+}
+/* CSS for footer */
+#bottomBar{
+    width: 100%;
+    height: 60px;
+    background-color: #004332;
+    margin-bottom: -17px;
+}
+#navBar_bottom{
+    width: 70%;
+    height: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+#navBar_bottom a{
+    text-decoration: none;
+    color: #c0a159;
+    font-size: 22px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#navBar_bottom a:hover{
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#copyrights{
+    width: 100%;
+    height: 30px;
+    background-color: #c0a159;
+    text-align: center;
+}
+#copyrights p{
+    padding: 3px;
+}

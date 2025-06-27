@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)file:///F:/1%20Semester%20After%20Mids/AICT%20Lab/project/pro2.html -->
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H &amp; M 's menu page</title>
+    <!-- External CSS for styling navigation bar, img, dots-->
+    <link rel="stylesheet" href="menu.css">
+    <!--Internal CSS for styling the content appear on the menu page -->
+    <style>
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            color: #2f4f4f;
+            animation: floatin 3s ease-in-out 1;
+        }
+
+        @keyframes floatin {
+            0% {
+                transform: translateY(20px);
+            }
+
+            100% {
+                transform: translateY(0);
+                /* Move back down */
+            }
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #004332;
+            padding: 10px 20px;
+            margin: 5px;
+            border-top: 2px solid transparent;
+            border-bottom: 2px solid transparent;
+            cursor: pointer;
+        }
+
+        .nav a.active {
+            background-color: #004332;
+            color: #c0a159;
+        }
+
+        .nav a:hover {
+            border-bottom: 2px solid #004332;
+        }
+
+        .menu-section {
+            display: none;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .menu-section.active {
+            display: flex;
+        }
+
+        .menu-section h2 {
+            width: 100%;
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+
+        }
+
+        .menu-item {
+            width: 45%;
+            margin-bottom: 20px;
+
+        }
+
+        .menu-item h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .menu-item p {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .menu-item .price {
+            font-size: 16px;
+            font-weight: bold;
+            text-align: right;
+        }
+
+        @media (max-width: 768%) {
+            .menu-item {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--Div for the navigation bar -->
+    <div id="addressBar">
+        <p id="address">Inside Centaurus Mall, Sector F-8/4 F-8, Islamabad</p>
+    </div>
+    <div id="topBar">
+        <p id="resName">H&M's Delight</p>
+        <nav id="navBar">
+            <a href="home.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="dining.html">Private Dining</a>
+            <a href="About.html">About</a>
+            <a href="contact.html">Contact us</a>
+
+        </nav>
+        <a href="reservation.html" id="reservation">Reservations</a>
+    </div>
+    <!--Div to show the imges -->
+    <div class="slide-container">
+        <div class="effect slide" style="display: none;">
+            <img src="Images/pro img 1.jpg" width="1330" height="500">
+        </div>
+        <div class="effect slide" style="display: none;">
+            <img src="Images/pro img 2.png" width="1330" height="500">
+        </div>
+        <div class="effect slide" style="display: none;">
+            <img src="Images/pro img 3.jpg" width="1330" height="500">
+        </div>
+        <div class="effect slide" style="display: none;">
+            <img src="Images/pro img 4.jpg" width="1330" height="500">
+        </div>
+        <div class="effect slide" style="display: none;">
+            <img src="Images/pro img 6.jpg" width="1330" height="500">
+        </div>
+        <div class="effect slide" style="display: block;">
+            <img src="Images/pro img 8.jpg" width="1330" height="500">
+        </div>
+        <div class="effect slide" style="display: none;">
+            <img src="Images/pro img 11.jpg" width="1330" height="500">
+        </div>
+    </div>
+    <div class="dot-container">
+        <span class="    "></span>
+        <span class="    "></span>
+        <span class="    "></span>
+        <span class="    "></span>
+        <span class="    "></span>
+        <span class="   active"></span>
+        <span class="   "></span>
+    </div>
+    <!--External javascript for the slideshow of images and dots -->
+    <script src="menu.js"></script>
+    <div>
+        <h1
+            style="color :#004332; text-align: center; justify-content: center;">
+            MENU</h1>
+    </div>
+    <!--Div for display the content on the menu page -->
+    <div class="container">
+        <div class="nav">
+            <a href="file:///F:/1%20Semester%20After%20Mids/AICT%20Lab/project/pro2.html" class="active"
+                onclick="showMenu('breakfast')">BREAKFAST</a>
+            <a href="file:///F:/1%20Semester%20After%20Mids/AICT%20Lab/project/pro2.html"
+                onclick="showMenu('lunch')">LUNCH</a>
+            <a href="file:///F:/1%20Semester%20After%20Mids/AICT%20Lab/project/pro2.html"
+                onclick="showMenu('dinner')">DINNER</a>
+            <a href="file:///F:/1%20Semester%20After%20Mids/AICT%20Lab/project/pro2.html"
+                onclick="showMenu('dessert')">DESSERT</a>
+            <a href="file:///F:/1%20Semester%20After%20Mids/AICT%20Lab/project/pro2.html"
+                onclick="showMenu('sunday-brunch')">SUNDAY BRUNCH</a>
+            <a href="file:///F:/1%20Semester%20After%20Mids/AICT%20Lab/project/pro2.html"
+                onclick="showMenu('new-years-day-brunch')">NEW YEAR'S DAY BRUNCH</a>
+        </div>
+        <div id="breakfast" class="menu-section active">
+            <div class="menu-item">
+                <h2>HEALTHY CORNER</h2>
+                <h3>OVERNIGHT OATS</h3>
+                <p>blueberries, rolled oats, hemp seeds, chia seeds, goji berries, oat milk, coconut yogurt, agave syrup
+                </p>
+                <p class="price">17</p>
+                <h3>AVOCADO ON TOAST</h3>
+                <p>heirloom tomato, poached egg, sourdough, tomato jam, greens, togarashi, chive oil</p>
+                <p class="price">28</p>
+                <h3>STEEL CUT OATMEAL</h3>
+                <p>quinoa, almond butter, banana, berries, maple syrup</p>
+                <p class="price">15</p>
+            </div>
+            <div class="menu-item">
+                <h2>SIGNATURE BREAKFAST</h2>
+                <p>served with house potatoes or green salad</p>
+                <h3>FARMHOUSE BREAKFAST</h3>
+                <p>two heritage eggs, toast, choice of bacon, peameal bacon, or farmer's sausage</p>
+                <p class="price">34</p>
+                <h3>HOGTOWN BREAKFAST SANDWICH</h3>
+                <p>heritage egg scramble, peameal bacon, cheddar cheese, arugula, mustard aioli, brioche bun</p>
+                <p class="price">27</p>
+            </div>
+        </div>
+        <div id="lunch" class="menu-section">
+            <div class="menu-item">
+                <h2>LUNCH SPECIALS</h2>
+                <h3>GRILLED CHICKEN SANDWICH</h3>
+                <p>grilled chicken, lettuce, tomato, mayo, whole grain bread</p>
+                <p class="price">15</p>
+                <h3>CAESAR SALAD</h3>
+                <p>romaine lettuce, croutons, parmesan cheese, caesar dressing</p>
+                <p class="price">12</p>
+            </div>
+            <div class="menu-item">
+                <h2>SOUPS &amp; SALADS</h2>
+                <h3>TOMATO SOUP</h3>
+                <p>fresh tomatoes, basil, cream</p>
+                <p class="price">8</p>
+                <h3>GREEK SALAD</h3>
+                <p>cucumber, tomato, olives, feta cheese, olive oil</p>
+                <p class="price">10</p>
+            </div>
+        </div>
+        <div id="dinner" class="menu-section">
+            <div class="menu-item">
+                <h2>DINNER ENTREES</h2>
+                <h3>GRILLED SALMON</h3>
+                <p>grilled salmon, lemon butter sauce, asparagus</p>
+                <p class="price">25</p>
+                <h3>STEAK FRITES</h3>
+                <p>grilled steak, french fries, garlic butter</p>
+                <p class="price">30</p>
+            </div>
+            <div class="menu-item">
+                <h2>PASTA</h2>
+                <h3>SPAGHETTI BOLOGNESE</h3>
+                <p>spaghetti, ground beef, tomato sauce, parmesan cheese</p>
+                <p class="price">18</p>
+                <h3>FETTUCCINE ALFREDO</h3>
+                <p>fettuccine, cream sauce, parmesan cheese</p>
+                <p class="price">20</p>
+            </div>
+        </div>
+        <div id="dessert" class="menu-section">
+            <div class="menu-item">
+                <h2>DESSERTS</h2>
+                <h3>CHOCOLATE CAKE</h3>
+                <p>rich chocolate cake, chocolate ganache</p>
+                <p class="price">8</p>
+                <h3>CHEESECAKE</h3>
+                <p>classic cheesecake, berry compote</p>
+                <p class="price">9</p>
+            </div>
+            <div class="menu-item">
+                <h2>ICE CREAM</h2>
+                <h3>VANILLA ICE CREAM</h3>
+                <p>vanilla ice cream, chocolate sauce</p>
+                <p class="price">6</p>
+                <h3>STRAWBERRY ICE CREAM</h3>
+                <p>strawberry ice cream, fresh strawberries</p>
+                <p class="price">6</p>
+            </div>
+        </div>
+        <div id="sunday-brunch" class="menu-section">
+            <div class="menu-item">
+                <h2>SUNDAY BRUNCH</h2>
+                <h3>EGGS BENEDICT</h3>
+                <p>poached eggs, english muffin, hollandaise sauce, ham</p>
+                <p class="price">14</p>
+                <h3>FRENCH TOAST</h3>
+                <p>french toast, maple syrup, fresh berries</p>
+                <p class="price">12</p>
+            </div>
+            <div class="menu-item">
+                <h2>BRUNCH SPECIALS</h2>
+                <h3>AVOCADO TOAST</h3>
+                <p>avocado, poached egg, sourdough bread</p>
+                <p class="price">10</p>
+                <h3>BREAKFAST BURRITO</h3>
+                <p>scrambled eggs, sausage, cheese, tortilla</p>
+                <p class="price">11</p>
+            </div>
+        </div>
+        <div id="new-years-day-brunch" class="menu-section">
+            <div class="menu-item">
+                <h2>NEW YEAR'S DAY BRUNCH</h2>
+                <h3>LOBSTER BENEDICT</h3>
+                <p>poached eggs, english muffin, hollandaise sauce, lobster</p>
+                <p class="price">20</p>
+                <h3> PANCAKES</h3>
+                <p>pancakes, strawberry syrup, fresh berries</p>
+                <p class="price">18</p>
+            </div>
+            <div class="menu-item">
+                <h2>FAST FOOD</h2>
+                <h3>PIZZA's</h3>
+                <p> chicken pizza, vegetable pizza</p>
+                <p class="price">30</p>
+                <h3>BURGER'S</h3>
+                <p>zinger burger, tomato juice, spices</p>
+                <p class="price">62</p>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div id="bottomBar">
+            <nav id="navBar_bottom">
+                <a href="https://www.thefairmontroyalyork.com/privacy-policy/" target="_blank">Privacy Policy</a>
+                <a href="https://www.thefairmontroyalyork.com/cookie-policy/" target="_blank">Cookie Policy</a>
+                <a href="https://www.thefairmontroyalyork.com/consumer-request-form/" target="_blank">Consumer Request Form</a>
+                <a href="press.html">Press</a>
+            </nav>
+        </div>
+        <div id="copyrights">
+            <p>&copy; 2024 H&M’s Delight. All rights reserved.</p>
+        </div>
+    </div>
+    <!-- Internal javaScript for content on menu page-->
+    <script>
+        function showMenu(menuId) {
+            event.preventDefault();
+            var sections = document.querySelectorAll('.menu-section');
+            sections.forEach(function (section) {
+                section.classList.remove('active');
+            });
+            document.getElementById(menuId).classList.add('active');
+
+            var navLinks = document.querySelectorAll('.nav a');
+            navLinks.forEach(function (link) {
+                link.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+    </script>
+
+</body>
+
+</html>
